@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gelasio";
+  background-color: #110e14;
+}
+
+/*cabeçalho que provavelmente o antonio veio vê*/
+header {
+  background-color: #110e14;
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+.cabecalho-itens {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cabecalho-imagem {
+  width: clamp(60px, 10%, 120px);
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.titulo_site {
+  flex: 1;
+  padding: 10px;
+  font-size: clamp(20px, 3vw, 40px); /* o tamanho do titulo tava fixo oque impossibilitava a responsividade */
+  text-align: center;
+}
+
+.sociais {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+
+.icone-social {
+  width: clamp(30px, 5vw, 50px);
+  height: auto;
+}
+
+/*sobre*/
+.sobreaurudo {
+  background-color: #1a1520;
+}
+
+.sobre {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #ccc;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* banner */
+.banner1 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.banner-imagem {
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* mapa(ou minha tentiva de faze*/
+.mapa-secao {
+  padding: 40px 20px;
+  background-color: #110e14;
+}
+
+.mapa-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 24px 4px rgba(33, 207, 255, 0.2), 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 450px;
+  display: block;
+  border: 0;
+}
+
+/* area dos amigo*/
+.estudante {
+  background-color: #160d22; 
+  padding: 25px 20px 50px;
+}
+
+.estudante_titulo {
+  padding: 40px 20px;
+  font-size: clamp(28px, 5vw, 55px); 
+  color: #21cfff;
+  text-align: center;
+}
+
+.estudantes_todos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.estudante-div {
+  text-align: center;
+  padding: 24px 16px;
+  flex: 1 1 220px;    
+  max-width: 350px;
+}
+
+.estudante-imagem {
+  width: 100%;         
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.estudante-nome {
+  color: aqua;
+  font-size: clamp(18px, 2.5vw, 32px);
+  margin: 12px 0 8px;
+}
+
+.estudante-icones {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.estudante-icone {
+  width: clamp(40px, 8vw, 65px); 
+  height: auto;
+  padding: 6px 4px;
+  cursor: pointer;
+}
+
+/* rodapé*/
+.escola {
+  background-image: linear-gradient(#220c46, #09123b);
+  color: rgb(218, 208, 208);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.escola-titulo {
+  padding: 20px;
+  font-size: clamp(14px, 2vw, 22px);
+  line-height: 1.6;
+}
+
+.logo_rodape {
+  height: 80px;
+  width: auto;
+  padding: 12px 0;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.escola p {
+  font-size: clamp(11px, 1.5vw, 14px);
+  color: #aaa;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+.link {
+  color: #21cfff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .cabecalho-itens {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sociais {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .titulo_site {
+    width: 100%;
+  }
+
+  .estudantes_todos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estudante-div {
+    max-width: 90%;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .mapa-container iframe {
+    height: 250px;
+  }
+
+  .cabecalho-imagem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo_rodape {
+    height: 60px;
+  }
+}
